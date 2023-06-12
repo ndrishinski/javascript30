@@ -7,6 +7,15 @@
     <link rel="icon" href="https://fav.farm/🔥" />
   </head>
   <body>
-    <script></script>
+    <script>
+      const secret = 'nick'
+      const sequence = []
+      window.addEventListener('keyup', (e) => {
+        sequence.push(e.key)
+        sequence.splice(-secret.length - 1, sequence.length - secret.length)
+        console.log(sequence)
+        if (sequence.join('').includes(secret)) cornify_add()
+      })
+    </script>
   </body>
 </html>
